@@ -7,11 +7,11 @@ resource "proxmox_vm_qemu" "vmdeployed" {
   memory      = var.memory
  
   count       = var.vm_count
-  vmid        = 600 + count.index
+  vmid        = var.vmid_base + count.index
 
   disks {
-    virtio {
-      virtio0 {
+    scsi {
+      scsi0 {
         disk {
           size = var.disk_size
           storage = var.storage

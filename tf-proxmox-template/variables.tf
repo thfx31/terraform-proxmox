@@ -22,15 +22,15 @@ variable "vm_name" {
   default     = "Ubuntu-VM"
 }
 
-variable "vmid" {
-  description = "ID de la VM"
+variable "vmid_base" {
+  description = "Base de départ pour les identifiants des VMs"
   type        = number
-  default     = null
+  default     = 500
 }
 
 variable "vm_count" {
   description = "Nombre de VMs à déployer"
-  default     = 2
+  default     = 4
 }
 
 variable "vm_name_prefix" {
@@ -65,7 +65,7 @@ variable "memory" {
 variable "disk_size" {
   description = "La taille du disque de la VM (en Go)"
   type        = string
-  default     = "30"
+  default     = "32"
 }
 
 variable "storage" {

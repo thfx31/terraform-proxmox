@@ -1,12 +1,13 @@
 resource "proxmox_vm_qemu" "vmdeployed" {
 
-  name        = var.vm_name
+  name        = "${var.vm_name_prefix}-${count.index + 1}"
   target_node = var.target_node
+  clone       = var.template_name
   cores       = var.cores
   memory      = var.memory
  
   count       = var.vm_count
-  vmid        = 700 + count.index
+  vmid        = 600 + count.index
 
   disks {
     virtio {
@@ -14,13 +15,6 @@ resource "proxmox_vm_qemu" "vmdeployed" {
         disk {
           size = var.disk_size
           storage = var.storage
-        }
-      }
-    }
-    ide {
-      ide0 {
-        cdrom {
-          iso = var.iso_path
         }
       }
     }

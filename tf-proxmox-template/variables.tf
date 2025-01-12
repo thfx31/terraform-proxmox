@@ -44,10 +44,10 @@ variable "target_node" {
   default     = "pve"
 }
 
-variable "iso_path" {
-  description = "Le chemin de l'image ISO pour la VM"
+variable "template_name" {
+  description = "Le nom du template à utiliser pour créer la VM"
   type        = string
-  default     = "local:iso/ubuntu-24.04-live-server-amd64.iso"
+  default     = "Ubuntu2404-template"
 }
 
 variable "cores" {

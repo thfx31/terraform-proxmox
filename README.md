@@ -26,5 +26,7 @@ pveum aclmod / -user terraform@pve -role TerraformRole
 pveum aclmod / --roles TerraformRole --token 'terraform@pve!terraform' --propagate 1
 ```
 &nbsp;
-## 5 - Deploy your VMs with ISO or template
+## 5 - Deploy your VMs
 
+- [ISO](https://github.com/thfx31/terraform-proxmox/tree/main/tf-proxmox-iso)
+- [Template](https://github.com/thfx31/terraform-proxmox/tree/main/tf-proxmox-template)

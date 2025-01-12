@@ -1,7 +1,7 @@
 # Deploy VMs with Terraform on your Proxmox server
 &nbsp;
 
-# 1 - Create Terraform User for Proxmox
+## 1 - Create Terraform User for Proxmox
 
 ```sh
 pveum useradd terraform@pve -password PASSWORD
